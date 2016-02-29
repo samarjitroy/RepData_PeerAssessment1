@@ -42,6 +42,7 @@ A sample of the data.
 17566    NA 2012-11-30     2345
 17567    NA 2012-11-30     2350
 17568    NA 2012-11-30     2355
+
 ```
 
 
@@ -238,6 +239,7 @@ Here a sample results with new three fill columns. From the result it is very cl
 
 ```
 3. Now a new dataset named as fillIntervalValue is create and column:steps is filled with the mean for that 5-minute interval if it is NA.
+
 ```
 fillIntervalValue <- function(steps, interval) {
     filled <- NA
@@ -307,6 +309,7 @@ Sample Results:
 
 ```
 Figure 3 is the plotting of new dataset which is clearly showing no missing data.
+
 ```
 title1 <- "Figure 3: Histogram of total steps per day"
 subtitle1 <- "The figure represents a histogram of the total number of steps taken each day"
@@ -327,6 +330,7 @@ gg1 <- ggplot(data=dailyImputedActivity) +
  ggsave("Fig3.png", gg1, width=240, height=200,units="mm")
  
 ```
+
 ![Fig3](Fig3.png)
 
 
