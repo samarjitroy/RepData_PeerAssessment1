@@ -96,12 +96,12 @@ gg1 <- ggplot(data=dailyActivity) +
 		    axis.text.y = element_text(face="bold", size=10, angle=55),
 		    plot.title=element_text(face="bold", size=12)
 		 ) +
-		 geom_text(size=2.5,hjust=.01, vjust=-.45,col="black", fontface="bold",aes(x=date,y=steps,label=as.integer(as.character(steps)))) +
+		 #geom_text(size=2.5,hjust=.01, vjust=-.45,col="black", fontface="bold",aes(x=date,y=steps,label=as.integer(as.character(steps)))) +
 		 geom_bar(stat="identity",position='dodge',aes(x=date, y=steps,fill=factor(date)), show.legend=FALSE) +
 		 geom_hline(yintercept = c(meanSteps,medianSteps-100), col=c("red","blue"),size=.2, show.legend=TRUE) +
 		 geom_hline(data=dailyMeanActivity,size=.2,yintercept = dailyMeanActivity$steps, col="green", linetype=2) 
  gg1
- ggsave("Fig1.png", gg1, width=240, height=200,units="mm")
+ ggsave("Fig1.png", gg1, width=185, height=120,units="mm")
 ```
 
 ![Fig1](Fig1.png)
@@ -152,7 +152,7 @@ stepsPerInterval <- ggplot(data = averagesDS, aes(x = interval, y = steps)) +
 
 stepsPerInterval
 
-ggsave("Fig2.png", stepsPerInterval, width=240, height=200,units="mm")
+ggsave("Fig2.png", stepsPerInterval, width=185, height=120,units="mm")
 
 ```
 
@@ -317,11 +317,11 @@ gg1 <- ggplot(data=dailyImputedActivity) +
 		    axis.text.y = element_text(face="bold", size=10, angle=55),
 		    plot.title=element_text(face="bold", size=12)
 		 ) +
-		 geom_text(size=2.5,hjust=.01, vjust=-.45,col="black", fontface="bold",aes(x=date,y=steps,label=as.integer(as.character(steps)))) +
+		 #geom_text(size=2.5,hjust=.01, vjust=-.45,col="black", fontface="bold",aes(x=date,y=steps,label=as.integer(as.character(steps)))) +
 		 geom_bar(stat="identity",position='dodge',aes(x=date, y=steps,fill=factor(date)), show.legend=FALSE) +
 		 geom_hline(yintercept = c(meanImputedSteps,medianInputSteps-100), col=c("red","blue"),size=.2, show.legend=TRUE)  
  gg1
- ggsave("Fig3.png", gg1, width=240, height=200,units="mm")
+ ggsave("Fig3.png", gg1, width=185, height=120,units="mm")
  
 ```
 
@@ -374,7 +374,7 @@ stepsPerInterval <- ggplot(data = averagesWithoutNA, aes(x = interval, y = steps
 
 stepsPerInterval
 
-ggsave("Fig4.png", stepsPerInterval, width=240, height=200,units="mm")
+ggsave("Fig4.png", stepsPerInterval, width=185, height=120,units="mm")
 
 ```
 ![Fig4](Fig4.png)
