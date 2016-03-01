@@ -1,5 +1,8 @@
 # Reproducible Research: Peer Assessment 1
-
+```
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ## Loading and preprocessing the data
 The data was provided in a csv file (activity.csv) as a zipped file and there are a total of 17,568 observations in this dataset. The variables included in this dataset are:
